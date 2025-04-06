@@ -1158,6 +1158,124 @@
           font-size: 1rem;
         }
       }
+
+      /* Elevator Pitch Section */
+      .elevator-pitch {
+        padding: 8rem 2rem;
+        background: #232836;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .elevator-pitch::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 20% 80%, rgba(139, 157, 189, 0.05) 0%, transparent 50%);
+        z-index: 0;
+      }
+
+      .pitch-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .pitch-content {
+        background: #1a1f2c;
+        padding: 3rem;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .pitch-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #8b9dbd, #6b7d9d);
+        opacity: 0.05;
+        transition: opacity 0.3s ease;
+      }
+
+      .pitch-content:hover::before {
+        opacity: 0.1;
+      }
+
+      .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        margin-bottom: 2rem;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 10px;
+      }
+
+      .pitch-description {
+        color: #8b9dbd;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: center;
+        margin-top: 1.5rem;
+      }
+
+      .pitch-highlight {
+        color: #8b9dbd;
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+      }
+
+      .pitch-highlight::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, #8b9dbd, #6b7d9d);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease;
+      }
+
+      .pitch-highlight:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      @media (max-width: 768px) {
+        .pitch-content {
+          padding: 2rem;
+        }
+        
+        .video-container {
+          margin-bottom: 1.5rem;
+        }
+        
+        .pitch-description {
+          font-size: 1rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1219,6 +1337,20 @@
         </div>
         <div class="about-image" data-aos="fade-left">
           <img src="image/PP.jpg" alt="Profile Image" class="floating" />
+        </div>
+      </div>
+    </section>
+
+    <section id="elevator-pitch" class="elevator-pitch">
+      <h2 class="section-title" data-aos="fade-up">Elevator Pitch</h2>
+      <div class="pitch-container">
+        <div class="pitch-content" data-aos="fade-up">
+         
+         
+          <div style="position: relative; padding-bottom: 75%; height: 0;"><iframe src="https://www.loom.com/embed/8b27028d448b4057a4f1f800532ab079?sid=cf5d1782-305b-4c36-a20e-e347f5c44668" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>  
+          <p class="pitch-description">
+            Watch my <span class="pitch-highlight">elevator pitch</span> to learn more about my journey as a frontend developer and what drives my passion for creating exceptional web experiences.
+          </p>
         </div>
       </div>
     </section>
